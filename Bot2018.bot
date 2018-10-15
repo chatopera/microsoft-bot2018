@@ -1,0 +1,60 @@
+{
+  "name": "Bot2018",
+  "padlock": "6auRM24qavtYqgDrROR5FQ==!pW020ywNeDoFsFl5Fpg8AQTVUsxb2EYg6lyOQbnS9WSMNiNie6cyuExAWe3wgEUg",
+  "version": "2.0",
+  "services": [
+    {
+      "tenantId": "d0b47cad-355f-43b4-b973-16ebcd420140",
+      "subscriptionId": "add7ef53-69da-4777-90c5-873d3ba5db24",
+      "resourceGroup": "bot2018",
+      "serviceName": "Bot2018",
+      "type": "abs",
+      "name": "Bot2018",
+      "id": "1"
+    },
+    {
+      "connectionString": "mLfMTCA/Kx+BD4pkEfQbDA==!D4cgRFKpGEXhQPm13Tx4+XeONLPQnoqc7lIwDO5G45T6FcHc7gCjs3xL5NnNSEDbCGrtLn7db99p9lJivaKnuEgqfeCEnbQABlbS+WpYzFfbLU2Nv7NBZEX4HwQQysHcmSG0x73U5CAenI4PXZiKWrDySjD7cvDPTDR/aJO9tOGD5RLvZV2uDuhSWPzWNtddMx/oWZSawaDgAwZBtapYuA==",
+      "tenantId": "d0b47cad-355f-43b4-b973-16ebcd420140",
+      "subscriptionId": "add7ef53-69da-4777-90c5-873d3ba5db24",
+      "resourceGroup": "bot2018",
+      "serviceName": "bot20189eae",
+      "type": "blob",
+      "id": "2"
+    },
+    {
+      "appId": "",
+      "appPassword": "",
+      "endpoint": "http://localhost:3978/api/messages",
+      "type": "endpoint",
+      "name": "development",
+      "id": "3"
+    },
+    {
+      "appId": "7ee709d0-e67b-4a0e-b937-841a5f5b18f9",
+      "appPassword": "02TRpx20wnigBEdYm0oZxg==!eLmE7t4RY0+mIC5zzZMR4z1C189OvNar9fSOJJQB9WE=",
+      "endpoint": "https://bot2018.azurewebsites.net/api/messages",
+      "type": "endpoint",
+      "name": "production",
+      "id": "4"
+    },
+    {
+      "instrumentationKey": "mVCOG0NdqeSC7F+xheSkAQ==!oEqofCqSyBHEMcoaiBdirPUe4RwIarx9s4mltTaF61OyXIGQCjWbX6HT9qoSvJSS",
+      "applicationId": "704e535f-ba54-4e88-bc6f-601cf652abaf",
+      "apiKeys": {},
+      "tenantId": "d0b47cad-355f-43b4-b973-16ebcd420140",
+      "subscriptionId": "add7ef53-69da-4777-90c5-873d3ba5db24",
+      "resourceGroup": "bot2018",
+      "serviceName": "Bot20183gdepz",
+      "type": "appInsights",
+      "id": "5"
+    },
+    {
+      "appId": "58ba490f-17f0-4da4-b251-82aa244ca6fc",
+      "authoringKey": "nNTHB9xMdsYcbVK8+zn8QQ==!E6QBqDyQxvkrHE6EMw1lwfWjwT0alxzZ/U0MS9cOp35+RcJ/sOUT6GP5by4YOsi7",
+      "region": "westus",
+      "type": "luis",
+      "name": "BasicBotLuisApplication",
+      "id": "6"
+    }
+  ]
+}
