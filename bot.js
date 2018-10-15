@@ -11,9 +11,11 @@ const { DialogSet, DialogTurnStatus } = require('botbuilder-dialogs');
 const { UserProfile } = require('./dialogs/greeting/userProfile');
 const { WelcomeCard } = require('./dialogs/welcome');
 const { GreetingDialog } = require('./dialogs/greeting');
+const {BookCabDialog} = require('./dialogs/bookcab');
 
 // Greeting Dialog ID
 const GREETING_DIALOG = 'greetingDialog';
+const BOOKCAB_DIALOG = 'bookCabDialog';
 
 // State Accessor Properties
 const DIALOG_STATE_PROPERTY = 'dialogState';
@@ -27,6 +29,7 @@ const GREETING_INTENT = 'Greeting';
 const CANCEL_INTENT = 'Cancel';
 const HELP_INTENT = 'Help';
 const NONE_INTENT = 'None';
+const BOOKCAB_INTENT = 'BookCab';
 
 // Supported LUIS Entities, defined in ./dialogs/greeting/resources/greeting.lu
 const USER_NAME_ENTITIES = ['userName', 'userName_patternAny'];
@@ -76,7 +79,7 @@ class BasicBot {
         this.dialogs = new DialogSet(this.dialogState);
         // Add the Greeting dialog to the set
         this.dialogs.add(new GreetingDialog(GREETING_DIALOG, this.userProfileAccessor));
-
+        this.dialogs.add(new BookCabDialog(BOOKCAB_DIALOG, this.userProfileAccessor));
         this.conversationState = conversationState;
         this.userState = userState;
     }
@@ -102,6 +105,8 @@ class BasicBot {
             // Perform a call to LUIS to retrieve results for the current activity message.
             const results = await this.luisRecognizer.recognize(context);
             const topIntent = LuisRecognizer.topIntent(results);
+            console.log("topIntent", topIntent)
+
 
             // update user profile property with any entities captured by LUIS
             // This could be user responding with their name or city while we are in the middle of greeting dialog,
@@ -131,6 +136,9 @@ class BasicBot {
                     switch (topIntent) {
                     case GREETING_INTENT:
                         await dc.beginDialog(GREETING_DIALOG);
+                        break;
+                    case BOOKCAB_INTENT:
+                        await dc.beginDialog(BOOKCAB_DIALOG);
                         break;
                     case NONE_INTENT:
                     default:

@@ -74,5 +74,10 @@ node ./index.js
 nodemon ./index.js
 ```
 
+### Bot Cloud Instance
 
+```
+git clone https://bot2018.scm.azurewebsites.net:443/bot2018.git
+deploy8 / 840LT6NDW/
+```
 
